@@ -155,3 +155,4 @@ Further support resources can be found on Kinesis.com:
 In the event of a hardware issue it may be necessary to open a support ticket directly with Kinesis as opposed to a GitHub issue in this repository.
 * https://kinesis-ergo.com/support/kb360pro/#ticket
 
+Trigger change
