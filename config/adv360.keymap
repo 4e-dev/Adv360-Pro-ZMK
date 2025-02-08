@@ -48,7 +48,7 @@
 
         default_layer_windows {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &none                                                                       &mo 5      &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 0                                                                      &mo 5      &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                       &tog 3     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &mo 2     &kp LEFT_CONTROL  &kp LALT      &kp RIGHT_ALT  &kp RIGHT_CONTROL  &none      &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME      &kp PG_UP                                    &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
