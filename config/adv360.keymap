@@ -48,9 +48,9 @@
 
         default_layer_mac {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 2                                                                  &mo 5      &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &tog 0                                                                  &tog 3     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &mo 3     &kp LEFT_COMMAND  &kp LALT      &kp RCTRL  &kp RIGHT_COMMAND  &none      &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 0                                                                  &mo 5      &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &tog 1                                                                  &tog 3     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &mo 2     &kp LEFT_COMMAND  &kp LALT      &kp RCTRL  &kp RIGHT_COMMAND  &tog 4     &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME      &kp PG_UP                                &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
 &mo 6      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL           &kp END       &kp PG_DN  &kp ENTER          &kp SPACE          &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 6
             >;
