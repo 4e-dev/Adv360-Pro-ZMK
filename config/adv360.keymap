@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -36,43 +35,33 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer_linux {
+        main {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 0                                                                            &mo 5      &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &tog 1                                                                            &tog 3     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &mo 2     &kp LEFT_CONTROL  &kp LALT            &kp RIGHT_ALT  &kp RIGHT_CONTROL  &tog 4     &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp LEFT_GUI        &kp RGUI                                     &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&kp LSHFT  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL           &kp LEFT_SHIFT      &mo 6          &kp ENTER          &kp SPACE          &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &kp RSHFT
-            >;
-        };
-
-        default_layer_mac {
-            bindings = <
-&kp EQUAL       &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 0                                                               &mo 5      &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB         &kp Q      &kp W     &kp E     &kp R      &kp T   &tog 1                                                               &tog 3     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC         &kp A      &kp S     &kp D     &kp F      &kp G   &mo 2     &kp LEFT_COMMAND  &kp LCTRL      &kp RCMD       &kp RCTRL  &tog 4     &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT       &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp HOME       &kp RIGHT_ALT                        &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&kp LEFT_SHIFT  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL           &kp END        &mo 6          &kp ENTER  &kp SPACE          &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &kp RIGHT_SHIFT
-            >;
-        };
-
-        media_control {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans             &trans           &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans             &trans           &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans             &trans           &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans             &trans           &trans      &trans  &trans
+&kp EQUAL       &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 0                                                                              &mo 4      &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB         &kp Q      &kp W     &kp E     &kp R      &kp T   &tog 1                                                                              &tog 0     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC         &kp A      &kp S     &kp D     &kp F      &kp G   &mo 2     &kp LEFT_CONTROL  &kp LALT            &kp RIGHT_ALT    &kp RIGHT_CONTROL  &tog 3     &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z      &kp X     &kp C     &kp V      &kp B                               &kp LEFT_GUI        &kp RGUI                                       &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RIGHT_SHIFT
+&mo 5           &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL           &kp LEFT_SHIFT      &kp RIGHT_SHIFT  &kp ENTER          &kp SPACE          &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 5
             >;
         };
 
         gaming {
             bindings = <
-&trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp N6                                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &kp TAB       &kp Q         &kp W         &kp E         &kp R   &kp T                                               &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp LSHFT     &kp A         &kp S         &kp D         &kp F   &kp G      &kp LCTRL  &kp LGUI      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &kp Z         &kp X         &kp C         &kp V         &kp B                         &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans                &kp SPACE  &kp LCTRL  &trans        &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp N6                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp TAB       &kp Q         &kp W         &kp E         &kp R   &kp T                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ESC       &kp A         &kp S         &kp D         &kp F   &kp G      &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT     &kp Z         &kp X         &kp C         &kp V                         &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans                &kp SPACE  &kp LCTRL  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        media_control {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans                &trans                &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans                &trans                &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans                &trans                &trans      &trans  &trans
             >;
         };
 
@@ -88,21 +77,21 @@
 
         mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader           &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                         &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG              &bl BL_DEC  &bl BL_INC  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans       &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader  &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &none         &none         &bootloader  &bt BT_CLR  &bt BT_CLR      &none  &none  &bootloader  &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &macro_ver    &none                                  &bl BL_ON       &none                      &none  &none  &none  &none  &none  &none
+&none  &none         &none         &none         &none                       &bl BL_DEC   &bl BL_INC  &bl BL_OFF      &none  &none  &none               &none  &none  &none  &none  &none
             >;
         };
 
         fn {
             bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F1   &kp F2   &kp F3   &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F7   &kp F8   &kp F9   &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F10  &kp F11  &kp F12          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&none  &none  &none    &none    &none    &none  &none                                    &none  &none           &none        &none          &none      &none  &none
+&none  &none  &kp F1   &kp F2   &kp F3   &none  &none                                    &none  &kp HOME        &kp PAGE_UP  &kp PAGE_DOWN  &kp END    &none  &none
+&none  &none  &kp F4   &kp F5   &kp F6   &none  &none  &none  &none       &none   &none  &none  &kp LEFT_ARROW  &kp DOWN     &kp UP_ARROW   &kp RIGHT  &none  &none
+&none  &none  &kp F7   &kp F8   &kp F9   &none                &none       &none                 &none           &none        &none          &none      &none  &none
+&none  &none  &kp F10  &kp F11  &kp F12         &none  &none  &trans      &trans  &none  &none                  &none        &none          &none      &none  &none
             >;
         };
     };
